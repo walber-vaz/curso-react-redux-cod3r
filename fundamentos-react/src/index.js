@@ -1,13 +1,11 @@
 import ReactDOM from 'react-dom';
-
+import Primeiro from './components/basicos/Primeiro';
 import './index.css';
-
-const tagH1 = <h1>Olá, React</h1>
 
 const root = document.querySelector('#root');
 ReactDOM.render(
   <div>
-    {tagH1}
+    <Primeiro />
   </div>,
   root
 );
