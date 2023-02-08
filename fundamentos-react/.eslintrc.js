@@ -4,18 +4,13 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  global: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
   extends: [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
     'airbnb',
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -28,11 +23,9 @@ module.exports = {
       version: 'detect',
     },
   },
-  plugins: [
-    'react',
-    'react-hooks',
-    'prettier',
-  ],
+  plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
+    'react/jsx-filename-extension': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
 };

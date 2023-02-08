@@ -1,17 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function ComProps(props) {
+function ComProps(props) {
   const { titulo, aluno, nota } = props;
-  const aprov = nota >= 7 ? 'aprovado' : 'reprovado';
+  const status = nota >= 7 ? 'aprovado' : 'reprovado';
   return (
     <>
+      {/* Fragment <> </> */}
       <h2>{titulo}</h2>
       <h3>
         <strong>{aluno}</strong>
       </h3>
       <p>
-        tem nota <strong>{nota}</strong> e foi <strong>{aprov}</strong>
+        tem nota <strong>{nota}</strong> e foi <strong>{status}</strong>
       </p>
     </>
   );
 }
+
+ComProps.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  aluno: PropTypes.string.isRequired,
+  nota: PropTypes.number.isRequired,
+};
+
+export default ComProps;
