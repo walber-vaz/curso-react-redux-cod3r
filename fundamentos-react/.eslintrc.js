@@ -27,5 +27,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'react/function-component-definition': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
