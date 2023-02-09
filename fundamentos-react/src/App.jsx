@@ -6,6 +6,7 @@ import Card from './components/Layout/Card';
 import Familia from './components/basicos/Familia';
 
 import './App.css';
+import FamiliaMembro from './components/basicos/FamiliaMembro';
 
 function App() {
   return (
@@ -22,7 +23,12 @@ function App() {
           <ComProps titulo="Situação do aluno" aluno="Pedro" nota={9.3} />
         </Card>
         <Card titulo="Desafio Familia" color="#003cff">
-          <Familia lastName="Vaz" />
+          <Familia lastName="Vaz">
+            <FamiliaMembro name="Walber" lastName="Vaz" />
+            <FamiliaMembro name="Pedro" lastName="Vaz" />
+            <FamiliaMembro name="Hadassa" lastName="Vaz" />
+            <FamiliaMembro name="Ione" lastName="Vaz" />
+          </Familia>
         </Card>
       </div>
     </div>

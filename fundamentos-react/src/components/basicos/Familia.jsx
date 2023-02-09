@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
-import FamiliaMembro from './FamiliaMembro';
-
 const Familia = (props) => {
-  const { lastName } = props;
+  const { children } = props;
+  // Fazendo passar as props do componente pai para o componente filho
+  // return <div>{cloneElement(children, { ...props })}</div>;
+  // Recendo todos os elementos do componente pai
   return (
     <div>
-      <FamiliaMembro name="Walber" lastName={lastName} />
-      <FamiliaMembro name="Ione" lastName={lastName} />
-      <FamiliaMembro name="Pedro" lastName={lastName} />
-      <FamiliaMembro name="Hadassa" lastName={lastName} />
+      {Children.map(children, (child) => cloneElement(child, { ...props }))}
     </div>
   );
 };
 
 Familia.propTypes = {
-  lastName: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Familia;
