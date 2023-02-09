@@ -5,16 +5,12 @@ function ComProps(props) {
   const { titulo, aluno, nota } = props;
   const status = nota >= 7 ? 'aprovado' : 'reprovado';
   return (
-    <>
+    <div>
       {/* Fragment <> </> */}
       <h2>{titulo}</h2>
-      <h3>
-        <strong>{aluno}</strong>
-      </h3>
-      <p>
-        tem nota <strong>{nota}</strong> e foi <strong>{status}</strong>
-      </p>
-    </>
+      <h3>{aluno}</h3>
+      <p>{`tem nota ${nota} e foi ${status}`}</p>
+    </div>
   );
 }
 

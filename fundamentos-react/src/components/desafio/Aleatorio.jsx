@@ -7,9 +7,7 @@ const Aleatorio = (props) => {
   return (
     <div>
       <h2>Número Aleatório</h2>
-      <p>
-        Entre {min} e {max}: {aleatorio}
-      </p>
+      <p>{`Entre ${min} e ${max}: ${aleatorio}`}</p>
     </div>
   );
 };
