@@ -4,6 +4,9 @@
   overflow: hidden;
   border: 3px solid red;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
 }
 
 .card .title {
@@ -14,6 +17,7 @@
 }
 
 .card .content {
+  flex: 1;
   color: #222;
   background-color: #f8f8f8;
   padding: 20px;

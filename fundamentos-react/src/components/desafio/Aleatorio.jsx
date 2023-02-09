@@ -6,7 +6,7 @@ const Aleatorio = (props) => {
   const aleatorio = Math.floor(Math.random() * (max - min + 1));
   return (
     <div>
-      <div>Número Aleátorio</div>
+      <h2>Número Aleatório</h2>
       <p>
         Entre {min} e {max}: {aleatorio}
       </p>
