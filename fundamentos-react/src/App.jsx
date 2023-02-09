@@ -11,13 +11,13 @@ function App() {
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="wrapper">
-        <Card titulo="Desafio Aleatório">
+        <Card titulo="Desafio Aleatório" color="#FA6900">
           <Aleatorio min={1} max={10} />
         </Card>
-        <Card titulo="Desafio Primeiro componente">
+        <Card titulo="Desafio Primeiro componente" color="#E94C6F">
           <Primeiro />
         </Card>
-        <Card titulo="Desafio Props">
+        <Card titulo="Desafio Props" color="#588c73">
           <ComProps titulo="Situação do aluno" aluno="Pedro" nota={9.3} />
         </Card>
       </div>
