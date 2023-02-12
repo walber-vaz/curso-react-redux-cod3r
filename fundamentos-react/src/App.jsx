@@ -4,9 +4,10 @@ import Primeiro from './components/basicos/Primeiro';
 import Aleatorio from './components/desafio/Aleatorio';
 import Card from './components/Layout/Card';
 import Familia from './components/basicos/Familia';
+import ListaAlunos from './components/repeticao/ListaAlunos';
+import FamiliaMembro from './components/basicos/FamiliaMembro';
 
 import './App.css';
-import FamiliaMembro from './components/basicos/FamiliaMembro';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             <FamiliaMembro name="Hadassa" lastName="Vaz" />
             <FamiliaMembro name="Ione" lastName="Vaz" />
           </Familia>
+        </Card>
+        <Card titulo="Desafio Repetição" color="#FF85CB">
+          <ListaAlunos />
         </Card>
       </div>
     </div>
