@@ -8,6 +8,7 @@ import ListaAlunos from './components/repeticao/ListaAlunos';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ParImpar from './components/condicional/ParImpar';
+import UserInfo from './components/condicional/UserInfo';
 
 import './App.css';
 import generateColorCardAleatory from './utils/generationColor';
@@ -45,6 +46,12 @@ function App() {
         </Card>
         <Card titulo="Desafio Condicional" color={generateColorCardAleatory()}>
           <ParImpar numero={20} />
+        </Card>
+        <Card titulo="Desafio Condicional" color={generateColorCardAleatory()}>
+          <UserInfo usuario={{ nome: 'Pedro' }} />
+        </Card>
+        <Card titulo="Desafio Condicional" color={generateColorCardAleatory()}>
+          <UserInfo usuario={{ email: 'email@email.com' }} />
         </Card>
       </div>
     </div>
