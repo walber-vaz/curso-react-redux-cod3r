@@ -1,20 +1,40 @@
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 table th, table td {
-    border: 1px solid #000;
-    padding: 10px;
+  border: 1px solid #000;
+  padding: 10px;
 }
 
 table th {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+table tr {
+  cursor: pointer;
+}
+
+table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #fff;
+}
+
+table tr:hover {
+  background-color: #89fbff;
+}
+
+table td:nth-child(3) {
+  text-align: right;
 }
 
 p {
-    font-weight: bold;
+  font-weight: bold;
 }
 .total {
   text-align: right;

@@ -28,7 +28,7 @@ const TabelaProdutos = () => (
         Total: R$&nbsp;
         {produtos
           .map((produto) => produto.preco)
-          .reduce((a, b) => a + b)
+          .reduce((a, b) => parseFloat(a) + parseFloat(b))
           .toFixed(2)
           .replace('.', ',')}
       </strong>

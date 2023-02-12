@@ -7,24 +7,29 @@ import Familia from './components/basicos/Familia';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
+import ParImpar from './components/condicional/ParImpar';
 
 import './App.css';
+import generateColorCardAleatory from './utils/generationColor';
 
 function App() {
   return (
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="wrapper">
-        <Card titulo="Desafio Aleatório" color="#FA6900">
+        <Card titulo="Desafio Aleatório" color={generateColorCardAleatory()}>
           <Aleatorio min={1} max={10} />
         </Card>
-        <Card titulo="Desafio Primeiro componente" color="#E94C6F">
+        <Card
+          titulo="Desafio Primeiro componente"
+          color={generateColorCardAleatory()}
+        >
           <Primeiro />
         </Card>
-        <Card titulo="Desafio Props" color="#588c73">
+        <Card titulo="Desafio Props" color={generateColorCardAleatory()}>
           <ComProps titulo="Situação do aluno" aluno="Pedro" nota={9.3} />
         </Card>
-        <Card titulo="Desafio Familia" color="#003cff">
+        <Card titulo="Desafio Familia" color={generateColorCardAleatory()}>
           <Familia lastName="Vaz">
             <FamiliaMembro name="Walber" lastName="Vaz" />
             <FamiliaMembro name="Pedro" lastName="Vaz" />
@@ -32,11 +37,14 @@ function App() {
             <FamiliaMembro name="Ione" lastName="Vaz" />
           </Familia>
         </Card>
-        <Card titulo="Desafio Repetição" color="#FF85CB">
+        <Card titulo="Desafio Repetição" color={generateColorCardAleatory()}>
           <ListaAlunos />
         </Card>
-        <Card titulo="Desafio Repetição" color="#693e33">
+        <Card titulo="Desafio Repetição" color={generateColorCardAleatory()}>
           <TabelaProdutos />
+        </Card>
+        <Card titulo="Desafio Condicional" color={generateColorCardAleatory()}>
+          <ParImpar numero={20} />
         </Card>
       </div>
     </div>
