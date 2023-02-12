@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+table th {
+    background-color: #000;
+    color: #fff;
+}
+
+p {
+    font-weight: bold;
+}
+.total {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 18px;
+}

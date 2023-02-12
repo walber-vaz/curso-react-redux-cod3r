@@ -6,6 +6,7 @@ import Card from './components/Layout/Card';
 import Familia from './components/basicos/Familia';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
+import TabelaProdutos from './components/repeticao/TabelaProdutos';
 
 import './App.css';
 
@@ -33,6 +34,9 @@ function App() {
         </Card>
         <Card titulo="Desafio Repetição" color="#FF85CB">
           <ListaAlunos />
+        </Card>
+        <Card titulo="Desafio Repetição" color="#693e33">
+          <TabelaProdutos />
         </Card>
       </div>
     </div>
