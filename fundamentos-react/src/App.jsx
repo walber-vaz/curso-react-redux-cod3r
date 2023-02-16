@@ -12,6 +12,7 @@ import UserInfo from './components/condicional/UserInfo';
 
 import './App.css';
 import generateColorCardAleatory from './utils/generationColor';
+import Direta from './components/comunicacao/Direta';
 
 function App() {
   return (
@@ -52,6 +53,12 @@ function App() {
         </Card>
         <Card titulo="Desafio Condicional" color={generateColorCardAleatory()}>
           <UserInfo usuario={{ email: 'email@email.com' }} />
+        </Card>
+        <Card
+          titulo="Desafio Comunicação Direta"
+          color={generateColorCardAleatory()}
+        >
+          <Direta />
         </Card>
       </div>
     </div>
