@@ -15,6 +15,7 @@ import generateColorCardAleatory from './utils/generationColor';
 import Direta from './components/comunicacao/Direta';
 import Indireata from './components/comunicacao/Indireata';
 import Input from './components/Form/Input';
+import Contador from './components/contador/Contador';
 
 function App() {
   return (
@@ -70,6 +71,12 @@ function App() {
           color={generateColorCardAleatory()}
         >
           <Input />
+        </Card>
+        <Card
+          titulo="Desafio Componente de Class"
+          color={generateColorCardAleatory()}
+        >
+          <Contador numeroInicial={10} />
         </Card>
       </div>
     </div>

@@ -29,6 +29,10 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/function-component-definition': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'react/jsx-no-bind ': 'off',
+    'react/jsx-no-bind': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/state-in-constructor': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'react/destructuring-assignment': 'off',
   },
 };
