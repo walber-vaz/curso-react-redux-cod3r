@@ -14,6 +14,7 @@ import './App.css';
 import generateColorCardAleatory from './utils/generationColor';
 import Direta from './components/comunicacao/Direta';
 import Indireata from './components/comunicacao/Indireata';
+import Input from './components/Form/Input';
 
 function App() {
   return (
@@ -63,6 +64,12 @@ function App() {
         </Card>
         <Card titulo="Desafio indireta" color={generateColorCardAleatory()}>
           <Indireata />
+        </Card>
+        <Card
+          titulo="Desafio componente controlado"
+          color={generateColorCardAleatory()}
+        >
+          <Input />
         </Card>
       </div>
     </div>
