@@ -13,6 +13,7 @@ import UserInfo from './components/condicional/UserInfo';
 import './App.css';
 import generateColorCardAleatory from './utils/generationColor';
 import Direta from './components/comunicacao/Direta';
+import Indireata from './components/comunicacao/Indireata';
 
 function App() {
   return (
@@ -59,6 +60,9 @@ function App() {
           color={generateColorCardAleatory()}
         >
           <Direta />
+        </Card>
+        <Card titulo="Desafio indireta" color={generateColorCardAleatory()}>
+          <Indireata />
         </Card>
       </div>
     </div>

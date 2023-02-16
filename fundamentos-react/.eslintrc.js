@@ -29,5 +29,6 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/function-component-definition': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/jsx-no-bind ': 'off',
   },
 };
