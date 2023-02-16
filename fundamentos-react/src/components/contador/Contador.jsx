@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Display from './Display';
+import Buttom from './Buttom';
+import PassoForm from './PassoForm';
 
 export default class Contador extends Component {
   state = {
@@ -32,34 +35,12 @@ export default class Contador extends Component {
     return (
       <div>
         <div>Contador</div>
-        <p>Valor inicial: {numero}</p>
-        <div>
-          <label htmlFor="passoInput">Passo: </label>
-          <input
-            type="number"
-            id="passoInput"
-            value={passo}
-            onChange={this.handleChange}
-          />
-        </div>
-        <button
-          type="button"
-          onClick={() => this.handleIncrement()}
-          style={{
-            padding: 5,
-          }}
-        >
-          +
-        </button>
-        <button
-          type="button"
-          onClick={() => this.handleDecrement()}
-          style={{
-            padding: 5,
-          }}
-        >
-          -
-        </button>
+        <Display numero={numero} />
+        <PassoForm onHandleChange={this.handleChange} passo={passo} />
+        <Buttom
+          onHandleIncremente={this.handleIncrement}
+          onHandleDecrement={this.handleDecrement}
+        />
       </div>
     );
   }
