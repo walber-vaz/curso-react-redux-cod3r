@@ -1,0 +1,11 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 420px;
+  width: 320px;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: red;
+  text-align: center;
+}

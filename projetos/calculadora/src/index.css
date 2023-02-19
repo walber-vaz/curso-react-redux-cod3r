@@ -1,0 +1,41 @@
+/* Reset default css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background: hsla(35, 79%, 68%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(35, 79%, 68%, 1) 0%,
+    hsla(286, 44%, 49%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(35, 79%, 68%, 1) 0%,
+    hsla(286, 44%, 49%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(35, 79%, 68%, 1) 0%,
+    hsla(286, 44%, 49%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EEB86D", endColorstr="#9946B2", GradientType=1 );
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
