@@ -1,0 +1,25 @@
+.mega input {
+  height: 30px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mega h2 {
+  margin-bottom: 20px;
+}
+
+.mega span {
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: black;
+  padding: 10px;
+  color: aqua;
+  margin: 5px;
+}
+
+.mega button {
+  height: 30px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

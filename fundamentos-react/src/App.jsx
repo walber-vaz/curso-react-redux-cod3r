@@ -16,6 +16,7 @@ import Direta from './components/comunicacao/Direta';
 import Indireata from './components/comunicacao/Indireata';
 import Input from './components/Form/Input';
 import Contador from './components/contador/Contador';
+import Mega from './components/desafio/Mega';
 
 function App() {
   return (
@@ -77,6 +78,9 @@ function App() {
           color={generateColorCardAleatory()}
         >
           <Contador numeroInicial={10} />
+        </Card>
+        <Card titulo="Desafio mega sena" color={generateColorCardAleatory()}>
+          <Mega />
         </Card>
       </div>
     </div>
