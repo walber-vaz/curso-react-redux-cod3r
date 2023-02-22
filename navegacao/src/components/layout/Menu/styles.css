@@ -1,6 +1,6 @@
 .menu {
   display: flex;
-  flex-basis: 25%;
+  flex-basis: 10%;
   background-color: dodgerblue;
 }
 
@@ -27,4 +27,10 @@
 
 .menu li a:hover {
   background-color: #0000001a;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-basis: 25%;
+  }
 }

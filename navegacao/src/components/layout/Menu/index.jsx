@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -8,10 +9,10 @@ const Menu = () => {
       <nav>
         <ul>
           <li>
-            <a href="/">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <a href="/">Sobre</a>
+            <Link to="/about">Sobre</Link>
           </li>
         </ul>
       </nav>
