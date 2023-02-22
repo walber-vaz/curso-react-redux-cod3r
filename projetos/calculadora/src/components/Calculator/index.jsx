@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useCallback, useMemo, useState } from "react";
 import Button from "../Button";
 import Display from "../Display";
 
@@ -11,37 +11,89 @@ function Calculator() {
   const [values, setValues] = useState([0, 0]);
   const [current, setCurrent] = useState(0);
 
-  function cleanMemory() {
+  useMemo(() => {
+    const displayValueUpdated = displayValue.toString();
+    const lastDigit = displayValueUpdated[displayValueUpdated.length - 1];
+    if (lastDigit === ".") {
+      setDisplayValue(parseFloat(displayValueUpdated));
+    }
+  }, [displayValue]);
+
+  const cleanMemory = useCallback(() => {
     setDisplayValue(0);
     setClearDisplay(false);
     setOperation(null);
     setValues([0, 0]);
     setCurrent(0);
-  }
+  }, []);
 
-  function setOperationFunc(operation) {
-    console.log(operation);
-  }
+  const setOperationFunc = useCallback(
+    (op) => {
+      if (current === 0) {
+        setOperation(op);
+        setCurrent(1);
+        setClearDisplay(true);
+      } else {
+        const equals = op === "=";
+        const currentOperation = operation;
+        const valuesUpdated = [...values];
 
-  function addDigit(n) {
-    if (n === "." && displayValue.includes(".")) {
-      return;
-    }
+        try {
+          // valuesUpdated[0] = eval(
+          //   `${valuesUpdated[0]} ${currentOperation} ${valuesUpdated[1]}`
+          // );
+          switch (currentOperation) {
+            case "+":
+              valuesUpdated[0] = valuesUpdated[0] + valuesUpdated[1];
+              break;
+            case "-":
+              valuesUpdated[0] = valuesUpdated[0] - valuesUpdated[1];
+              break;
+            case "*":
+              valuesUpdated[0] = valuesUpdated[0] * valuesUpdated[1];
+              break;
+            case "/":
+              valuesUpdated[0] = valuesUpdated[0] / valuesUpdated[1];
+              break;
+            default:
+              break;
+          }
+        } catch (e) {
+          valuesUpdated[0] = values[0];
+        }
 
-    const clearDisplayValue = displayValue === 0 || clearDisplay;
-    const currentValue = clearDisplayValue ? "" : displayValue;
-    const displayValueUpdated = currentValue + n;
-    setDisplayValue(displayValueUpdated);
-    setClearDisplay(false);
+        valuesUpdated[1] = 0;
+        setDisplayValue(valuesUpdated[0]);
+        setOperation(equals ? null : op);
+        setCurrent(equals ? 0 : 1);
+        setClearDisplay(!equals);
+        setValues(valuesUpdated);
+      }
+    },
+    [current, operation, values]
+  );
 
-    if (n !== ".") {
-      const newValue = parseFloat(displayValueUpdated);
-      const valuesUpdated = [...values];
-      valuesUpdated[current] = newValue;
-      setValues(valuesUpdated);
-      console.log(valuesUpdated);
-    }
-  }
+  const addDigit = useCallback(
+    (n) => {
+      if (n === "." && displayValue.includes(".")) {
+        return;
+      }
+
+      const clearDisplayValue = displayValue === 0 || clearDisplay;
+      const currentValue = clearDisplayValue ? "" : displayValue;
+      const displayValueUpdated = currentValue + n;
+      setDisplayValue(displayValueUpdated);
+      setClearDisplay(false);
+
+      if (n !== ".") {
+        const newValue = parseFloat(displayValueUpdated);
+        const valuesUpdated = [...values];
+        valuesUpdated[current] = newValue;
+        setValues(valuesUpdated);
+      }
+    },
+    [clearDisplay, current, displayValue, values]
+  );
 
   return (
     <div className="calculator">
@@ -67,4 +119,4 @@ function Calculator() {
   );
 }
 
-export default Calculator;
+export default memo(Calculator);
