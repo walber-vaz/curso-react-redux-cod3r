@@ -17,6 +17,9 @@ const Menu = () => {
           <li>
             <Link to="/param/123">Parâmetros</Link>
           </li>
+          <li>
+            <Link to="/xablau">Não existir</Link>
+          </li>
         </ul>
       </nav>
     </aside>
