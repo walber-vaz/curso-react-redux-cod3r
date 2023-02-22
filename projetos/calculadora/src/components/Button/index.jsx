@@ -2,9 +2,18 @@ import React from "react";
 
 import "./style.css";
 
-function Button({ label }) {
+function Button({ label, operation, double, triple, click }) {
   return (
-    <button className="button" type="button">
+    <button
+      className={`
+      button
+      ${operation ? "operation" : ""}
+      ${double ? "double" : ""}
+      ${triple ? "triple" : ""}
+    `}
+      type="button"
+      onClick={() => click && click(label)}
+    >
       {label}
     </button>
   );
