@@ -51,4 +51,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
+  min-width: 500px;
 }

@@ -1,6 +1,6 @@
 .menu {
   display: flex;
-  flex-basis: 10%;
+  flex-basis: 250px;
 
   background: linear-gradient(to top, #00b4db, #006c90);
 
@@ -37,6 +37,6 @@
 
 @media (max-width: 768px) {
   .menu {
-    flex-basis: 25%;
+    flex-basis: 250px;
   }
 }
