@@ -1,11 +1,10 @@
 .calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 420px;
-  width: 320px;
-  border-radius: 2rem;
+  height: 320px;
+  width: 235px;
+  border-radius: 1.5rem;
   overflow: hidden;
-  background-color: red;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
 }
