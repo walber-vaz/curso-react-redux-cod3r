@@ -18,7 +18,7 @@ body {
 
 .text {
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 3.8rem;
 }
 
 .red {
@@ -35,13 +35,14 @@ body {
 .btn {
   border-radius: 25px;
   margin: 10px;
-  padding: 15px 35px;
+  padding: 10px 25px;
   border: none;
   outline: none;
   background-color: #0092c3;
 
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #fff;
+  cursor: pointer;
 }
 
 .center {
