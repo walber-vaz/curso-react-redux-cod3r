@@ -5,6 +5,7 @@ import SectionTitle from '../../components/layout/SectionTitle';
 const UseEffect = props => {
   const [number, setNumber] = useState(1);
   const [factorial, setFactorial] = useState(1);
+  const [imparPar, setImparPar] = useState('Impar');
 
   const calcFactorial = useCallback(num => {
     const n = Number(num);
@@ -15,6 +16,7 @@ const UseEffect = props => {
 
   useEffect(() => {
     setFactorial(calcFactorial(number));
+    setImparPar(number % 2 === 0 ? 'Par' : 'Impar');
   }, [calcFactorial, number]);
 
   return (
@@ -40,6 +42,12 @@ const UseEffect = props => {
         />
       </div>
       <SectionTitle title="Exercício #02" />
+      <div className="center">
+        <div>
+          <span className="text">{imparPar}: </span>
+          <span className="text red">{number}</span>
+        </div>
+      </div>
     </div>
   );
 };
