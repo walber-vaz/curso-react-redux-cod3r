@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Content from '../components/layout/Content';
 import Menu from '../components/layout/Menu';
 
-import { DataContext, data } from '../data/dataContext';
+import { Store } from '../data/Store';
 import './App.css';
 
 const App = () => {
-  const [state, setState] = useState(data);
-
   return (
     <div className="app">
-      <DataContext.Provider value={{ state, setState }}>
+      <Store>
         <BrowserRouter>
           <Menu />
           <div className="container-content">
@@ -20,7 +18,7 @@ const App = () => {
             <Content />
           </div>
         </BrowserRouter>
-      </DataContext.Provider>
+      </Store>
     </div>
   );
 };
